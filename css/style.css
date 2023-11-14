@@ -1,0 +1,121 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: laksa;
+    src: url(../fonts/Laksaman/Laksaman.ttf);
+  }
+
+html{
+    font-size: 62.5%;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color:#fff;
+    font-family: laksa;
+    
+}
+
+#weather-card{
+    width: 400px;
+    height: 665px;
+    border-radius: 1rem;
+    background-image: url(../images/fondo.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    position: relative;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.tiempoHoy{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    margin-top: 10rem;
+}
+
+.tiempoHoy > div{
+    width: 200px;
+    padding-left: 1rem;
+}
+
+
+.tiempoHoy > p{
+    width: 200px;
+    height: 120px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.temperaturaCelsius{
+    font-size: 10rem;
+    line-height: 1;
+}
+
+
+p.date{
+    font-size: 2rem;
+    padding-left: 1.8rem;
+}
+
+#dias5{
+    display: flex;
+    position: absolute;
+    bottom: 200px;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+#dias5 div{
+    width: 20%;
+    height: 120px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: relative;
+}
+
+#dias5 div p{
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    width: 100%;
+    font-size: 1.4rem;
+    font-weight: bold;
+
+}
+
+#dias5 div p:nth-child(2){
+    position: absolute;
+    bottom: 18px;
+    text-align: center;
+    width: 100%;
+
+}
+
+.clear-sky {
+    background-image: url('../images/clear-sky.jpg');
+}
+  
+.cloudy {
+    background-image: url('../images/cloudy.jpg');
+}
+
+.rainy {
+    background-image: url('../images/rainy.jpg');
+}
+
+.cloudy-clear{
+    background-image: url('../images/cloudy-clear.png');
+}
+  
+.sunny5{
+    background-image: url('../images/sunny-5.png');
+}
