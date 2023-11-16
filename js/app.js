@@ -1,5 +1,6 @@
-// Reemplaza 'TU_CLAVE_DE_API' con tu clave de API de OpenWeatherMap
-const apiKey = '11e8481ca38ac48b38217347f625590a';
+import { env } from './config.js';
+const apiKey = env.API_KEY;
+
 const apiUrl = 'https://api.openweathermap.org/data/2.5/forecast';
 const city= 'vitoria-gasteiz'
 
@@ -108,23 +109,36 @@ async function tiempoActual() {
     forecast.forEach(day => {
       console.log(day);
       const tiempoDescripcion = day.weather
-      //const tiempoClass = tiempoAClase[tiempoDescripcion]
-      const tiempoClass = 'sunny'
+      const tiempoClass = tiempoAClase[tiempoDescripcion]
       const minTemperatureCelsius = Math.round(day.temperatures.min - 273.15);
       const maxTemperatureCelsius = Math.round(day.temperatures.max - 273.15);
       div5Days.innerHTML += `
-        <div class="${tiempoClass}5"><p>${maxTemperatureCelsius} °C</p><p>${minTemperatureCelsius} °C</p></div>
+        <div class="${tiempoClass}-5"><p>${maxTemperatureCelsius} °C</p><p>${minTemperatureCelsius} °C</p></div>
       `;
     });
   }
 
   // Mapeo de descripciones a clases CSS
 const tiempoAClase = {
-  'scattered clouds':'cloudy-clear',
-  'few clouds': 'few-cloudy',
-  'broken clouds': 'broken-cloudy',
-  'overcast clouds' : 'cloudy',
-  'light rain' : 'light-rainy'
+  'clear sky': 'soleado',
+  'few clouds': 'nubes-sol',
+  'scattered clouds': 'nublado',
+  'broken clouds': 'nublado',
+  'overcast clouds': 'nubes-sol',
+  'mist': 'neblina',
+  'fog': 'neblina',
+  'light rain': 'lluvia-ligera',
+  'moderate rain': 'lluvia-ligera',
+  'heavy rain': 'lluvia-intensa',
+  'thunderstorm': 'tormenta',
+  'snow': 'nieve',
+  'light snow': 'nieve',
+  'moderate snow':'nieve',
+  'heavy snow': 'nieve',
+  'freezing rain': 'nieve',
+  'sleet': 'aguanieve',
+  'shower rain': 'lluvia-intensa',
+  'rain and snow': 'aguanieve',
 };
 
 function formatSpanishDate(dateString) {

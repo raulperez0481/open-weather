@@ -100,22 +100,34 @@ p.date{
 
 }
 
-.clear-sky {
-    background-image: url('../images/clear-sky.jpg');
-}
-  
-.cloudy {
-    background-image: url('../images/cloudy.jpg');
+.soleado-5 {
+    background-image: url('../images/soleado-5.png');
 }
 
-.rainy {
-    background-image: url('../images/rainy.jpg');
+.nubes-sol-5{
+    background-image: url('../images/nubes-sol-5.png');
 }
 
-.cloudy-clear{
-    background-image: url('../images/cloudy-clear.png');
+.nublado-5{
+    background-image: url('../images/nublado-5.png');
 }
-  
-.sunny5{
-    background-image: url('../images/sunny-5.png');
+
+.lluvia-ligera-5{
+    background-image: url('../images/lluvia-ligera-5.png');
+}
+
+.lluvia-intensa-5{
+    background-image: url('../images/lluvia-intensa-5.png');
+}
+
+.tormenta-5{
+    background-image: url('../images/tormenta-5.png');
+}
+
+.nieve-5{
+    background-image: url('../images/nieve-5.png');
+}
+
+.aguanieve-5{
+    background-image: url('../images/lluvia-nieve-5.png');
 }
